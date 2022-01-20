@@ -2,16 +2,17 @@ package com.test.eventserviceapi;
 
 
 import com.test.eventservicedto.Event;
+import com.test.eventservicedto.EventDto;
 
 import java.util.List;
 
 public interface EventService {
 
-    Event createEvent(Event event);
+    EventDto createEvent(EventDto eventDto);
 
-    Event updateEvent(Event event);
+    EventDto updateEvent(EventDto event);
 
-    Event getEvent(long eventId);
+    EventDto getEvent(long eventId);
 
     void deleteEvent(long eventId);
 
