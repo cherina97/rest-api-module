@@ -5,7 +5,6 @@ import com.test.eventservicedto.Event;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,7 +16,7 @@ public class EventServiceController {
 
     private final EventService eventService;
 
-    @PostMapping("/new")
+    @PostMapping
     public ResponseEntity<Event> createEvent(@RequestBody Event event) {
         Event created = eventService.createEvent(event);
 
@@ -52,7 +51,7 @@ public class EventServiceController {
         return new ResponseEntity<>(events, HttpStatus.FOUND);
     }
 
-    @GetMapping("/{title}")
+    @GetMapping("/get/{title}")
     public ResponseEntity<List<Event>> getEventsByTitle(@PathVariable String title) {
         List<Event> eventsByTitle = eventService.getAllEventsByTitle(title);
 
