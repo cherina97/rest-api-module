@@ -44,12 +44,12 @@ public class EventServiceController implements EventApi {
     @Override
     public ResponseEntity<List<Event>> getAllEvents() {
         List<Event> events = eventService.getAllEvents();
-        return new ResponseEntity<>(events, HttpStatus.FOUND);
+        return new ResponseEntity<>(events, HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<List<Event>> getEventsByTitle(String title) {
         List<Event> eventsByTitle = eventService.getAllEventsByTitle(title);
-        return new ResponseEntity<>(eventsByTitle, HttpStatus.FOUND);
+        return new ResponseEntity<>(eventsByTitle, HttpStatus.OK);
     }
 }
