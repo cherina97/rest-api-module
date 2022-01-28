@@ -35,12 +35,12 @@ public interface EventApi {
     ResponseEntity<Void> deleteEvent(@PathVariable long id);
 
     @ApiOperation("Get all events")
-    @ResponseStatus(HttpStatus.FOUND)
+    @ResponseStatus(HttpStatus.OK)
     @GetMapping("/all")
     ResponseEntity<List<Event>> getAllEvents();
 
     @ApiOperation("Get all events by title")
-    @ResponseStatus(HttpStatus.FOUND)
+    @ResponseStatus(HttpStatus.OK)
     @GetMapping("/get/{title}")
     ResponseEntity<List<Event>> getEventsByTitle(@PathVariable String title);
 
