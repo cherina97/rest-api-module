@@ -59,7 +59,6 @@ public interface EventApi {
     @ApiOperation("Get all events")
     @ApiResponses({
             @ApiResponse(code = 200, message = "Getting all users successfully"),
-            @ApiResponse(code = 404, message = "User not found"),
             @ApiResponse(code = 500, message = "Internal server error")
     })
     @ResponseStatus(HttpStatus.OK)
@@ -69,7 +68,7 @@ public interface EventApi {
     @ApiOperation("Get all events by title")
     @ApiResponses({
             @ApiResponse(code = 200, message = "Getting all users by title successfully"),
-            @ApiResponse(code = 404, message = "User not found"),
+            @ApiResponse(code = 404, message = "Users not found"),
             @ApiResponse(code = 500, message = "Internal server error")
     })
     @ResponseStatus(HttpStatus.OK)
